@@ -73,13 +73,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations">
-      <Version>2019.1.1</Version>
+      <Version>2019.1.3</Version>
     </PackageReference>
     <PackageReference Include="JetBrains.ReSharper.SDK">
-      <Version>2019.1.1</Version>
+      <Version>2019.2.0</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)..\build\</PostBuildEvent>
+  </PropertyGroup>
 </Project>
