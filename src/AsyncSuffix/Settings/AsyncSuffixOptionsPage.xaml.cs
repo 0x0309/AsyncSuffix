@@ -50,7 +50,7 @@ namespace Sizikov.AsyncSuffix.Settings
                         customAsyncTypes.Items)
                 {
                     OptionsSettingsSmartContext.SetIndexedValue(AsyncSuffixSettingsAccessor.CustomAsyncTypes,
-                        editItemViewModel.PresentableName, editItemViewModel.PresentableName);
+                        editItemViewModel.PresentableName.Text, editItemViewModel.PresentableName.Text);
                 }
             };
             AddHeader("Custom types");
