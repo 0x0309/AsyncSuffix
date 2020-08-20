@@ -6,19 +6,20 @@ using JetBrains.ReSharper.Psi.Tree;
 using Sizikov.AsyncSuffix.Analyzer;
 
 
-[assembly: RegisterConfigurableSeverity(ConsiderUsingAsyncSuffixHighlighting.SeverityId,
-  null,
-  HighlightingGroupIds.BestPractice,
-  "Consider adding Async suffix",
-  "According to Microsoft guidelines a method which is Task-returning and is asynchronous in nature should have an 'Async' suffix. ",
-  Severity.SUGGESTION)]
 namespace Sizikov.AsyncSuffix.Analyzer
 {
+    [RegisterConfigurableSeverity(SeverityId,
+        null,
+        HighlightingGroupIds.BestPractice,
+        "Consider adding Async suffix",
+        "According to Microsoft guidelines a method which is Task-returning and is asynchronous in nature should have an 'Async' suffix. ",
+        Severity.SUGGESTION)]
     [ConfigurableSeverityHighlighting(SeverityId, CSharpLanguage.Name, OverlapResolve = OverlapResolveKind.WARNING)]
     public sealed class ConsiderUsingAsyncSuffixHighlighting : IHighlighting
     {
+        private const string SeverityId = "ConsiderUsingAsyncSuffix";
+
         public IMethodDeclaration MethodDeclaration { get; private set; }
-        public const string SeverityId = "ConsiderUsingAsyncSuffix";
 
         public ConsiderUsingAsyncSuffixHighlighting(IMethodDeclaration methodDeclaration)
         {

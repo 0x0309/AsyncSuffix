@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Sizikov.AsyncSuffix</id>
-        <version>1.7.0-local</version>
+        <version>1.8.0-local</version>
         <title>AsyncSuffix</title>
         <authors>Anton Sizikov</authors>
         <owners>AntonSizikov</owners>
@@ -10,12 +10,12 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Task returning method's naming analyzer. Async methods should have 'Async' suffix.</description>
         <releaseNotes>
-            &#8226;ReSharper 2020.1 support;
+            &#8226;ReSharper 2020.2 support;
     </releaseNotes>
         <language>en-US</language>
         <tags>async method  naming  task</tags>
         <dependencies>
-            <dependency id="Wave" version="[201, 202)" />
+            <dependency id="Wave" version="[202, 203)" />
         </dependencies>
     </metadata>
     <files>
